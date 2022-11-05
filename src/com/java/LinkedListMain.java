@@ -10,7 +10,7 @@ public class LinkedListMain {
         addingElements();
         insertingData();
         pushData();
-        popData();
+        popFirstData();
     }
 
 
@@ -65,7 +65,7 @@ public class LinkedListMain {
         stack.DisplayStack();
     }
 
-    public static void popData() {//input 56,30,70
+    public static void popFirstData() {//input 56,30,70
         Stack stack=new Stack();
         stack.push(56);
         stack.push(30);
@@ -74,7 +74,7 @@ public class LinkedListMain {
         stack.DisplayStack();
         System.out.println("==================UC5==================");
         System.out.println("required output sequence (after deleting first element ) ==> 30,70");
-        System.out.println("Pop value is : "+stack.pop());
+        System.out.println("Pop value is : "+stack.popFirstElement());
         System.out.println("=============================================================\n");
     }
 
