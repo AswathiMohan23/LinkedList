@@ -24,6 +24,20 @@ public class LinkedListMethods {
         node.next=head;
         head=node;
     }
+    public void insert(int index,int data){
+        Node node=new Node();
+        node.data=data;
+        node.next=null;
+        if(index==0){
+            add(data);
+        }
+        Node temp=head;
+        for(int i=0;i<index-1;i++){
+            temp=temp.next;
+        }
+        node.next=temp.next;
+        temp.next=node;
+    }
     public void display(){
         Node node = head;
         while(node.next!=null) {
