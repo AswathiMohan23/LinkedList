@@ -2,7 +2,7 @@ package com.java;
 
 import java.util.LinkedList;
 
-public class LinkedListCode {
+public class LinkedListMain {
     static LinkedListMethods linkedListMethods=new LinkedListMethods();
 
     public static void main(String[] args){
@@ -11,9 +11,10 @@ public class LinkedListCode {
     }
 
     public static void appendingTheElements() {
+        System.out.println("\nRequired output is ====> 56,30,70");
         linkedListMethods.append(56);
-        linkedListMethods.append(70);
         linkedListMethods.append(30);
+        linkedListMethods.append(70);
         linkedListMethods.display();
     }
 
