@@ -9,7 +9,18 @@ public class LinkedListMain {
         appendingTheElements();
         addingElements();
         insertingData();
+        pushData();
     }
+
+    public static void pushData() {
+        System.out.println("pushing the elements 56,30 and 70 ");
+        Stack stack=new Stack();
+        stack.push(56);
+        stack.push(30);
+        stack.push(70);
+        stack.DisplayStack();
+    }
+
     public static void createSimpleLinkedList() {
         LinkedList<Integer> list = new LinkedList<>();
         list.add(56);
