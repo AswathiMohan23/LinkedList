@@ -11,6 +11,8 @@ public class LinkedListMain {
         insertingData();
         pushData();
         popFirstData();
+        popLastData();
+
     }
 
 
@@ -75,6 +77,18 @@ public class LinkedListMain {
         System.out.println("================== UC5 ==================");
         System.out.println("required output sequence (after deleting first element ) ==> 30,70");
         System.out.println("Pop value is : "+stack.popFirstElement());
+        System.out.println("=============================================================\n");
+    }
+    public static void popLastData() {//input 56,30,70
+        Stack stack=new Stack();
+        stack.push(56);
+        stack.push(30);
+        stack.push(70);
+        System.out.println("================== UC5 ==================");
+        System.out.println("data is : ");
+        stack.DisplayStack();
+        System.out.println("required output sequence (after deleting first element ) ==> 30,70");
+        System.out.println("Pop value is : "+stack.popLastElement());
         System.out.println("=============================================================\n");
     }
 
