@@ -18,4 +18,11 @@ public class LinkedListMethods {
 
         }
     }
+    public void display(){
+        Node node = head;
+        while(node.next!=null) {
+            System.out.println(node.data);
+        }
+        System.out.println(node.data);// the while loop will check till next!=null, when next gets equal to null it exits without printing the data but i need that data so i am printing that data outside the loop
+    }
 }
