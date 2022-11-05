@@ -18,6 +18,12 @@ public class LinkedListMethods {
 
         }
     }
+    public void add(int data){
+        Node node=new Node();
+        node.data=data;
+        node.next=head;
+        head=node;
+    }
     public void display(){
         Node node = head;
         while(node.next!=null) {
