@@ -14,7 +14,7 @@ public class Stack {
             System.out.println(n+" ");
         }
     }
-    public int pop(){
+    public int popFirstElement(){
         int data;
         data = stackArray[popCount];
         stackArray[popCount]=0;
