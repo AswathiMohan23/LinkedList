@@ -72,7 +72,7 @@ public class LinkedListMain {
         stack.push(70);
         System.out.println("data is : ");
         stack.DisplayStack();
-        System.out.println("==================UC5==================");
+        System.out.println("================== UC5 ==================");
         System.out.println("required output sequence (after deleting first element ) ==> 30,70");
         System.out.println("Pop value is : "+stack.popFirstElement());
         System.out.println("=============================================================\n");
