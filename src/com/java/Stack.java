@@ -14,6 +14,15 @@ public class Stack {
             System.out.println(n+" ");
         }
     }
+    public int popLastElement(){
+        int data;
+        pushCount--; //in the above push method we have already incremented pushCount
+        // so if we decrement it we will get the last value
+        data = stackArray[pushCount];
+        stackArray[pushCount]=0;
+        DisplayStack();
+        return data;
+    }
     public int popFirstElement(){
         int data;
         data = stackArray[popCount];
@@ -21,5 +30,6 @@ public class Stack {
         DisplayStack();
         return data;
     }
+
 
 }
