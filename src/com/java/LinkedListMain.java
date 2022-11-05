@@ -1,5 +1,6 @@
 package com.java;
 
+import java.io.FilterOutputStream;
 import java.util.LinkedList;
 
 public class LinkedListMain {
@@ -12,6 +13,7 @@ public class LinkedListMain {
         pushData();
         popFirstData();
         popLastData();
+        searchNode();
 
     }
 
@@ -89,8 +91,25 @@ public class LinkedListMain {
         stack.DisplayStack();
         System.out.println("required output sequence (after deleting first element ) ==> 30,70");
         System.out.println("Pop value is : "+stack.popLastElement());
-        System.out.println("=============================================================\n");
     }
+    public static void searchNode(){
+        int result = 0;
+        System.out.println("===============================UC7==============================\n");
+        LinkedList<Integer> list = new LinkedList<>();
+        list.add(56);
+        list.add(30);
+        list.add(70);
+        int element=30;
+        System.out.println("list is : +"+list);
+        System.out.println("index 0 is  : "+list.get(0)+"\nindex 1 is : "+list.get(1)+"\nindex 2 is : "+list.get(2));
+        for(int i=0;i<list.size();i++) {
+            int value =list.get(i);
+            if (value == element) {
+                 result = i;
+                System.out.println("value 30 corresponds to node : "+result);
 
+            }
+        }
 
+        }
 }
