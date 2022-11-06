@@ -18,8 +18,6 @@ public class LinkedListMain {
         insertingAfterElement();
         deleteAndShowSize();//pop
         sortInAscendingOrder();
-
-
     }
 
     public static void sortInAscendingOrder() {
@@ -36,7 +34,6 @@ public class LinkedListMain {
     }
 
     public static void addingElements() {
-
         System.out.println("\n==============================UC2============================");
         System.out.println("\nwhile adding, the new elements will get added in front " +
                 "\nso required output ===> 56,30,70");

@@ -4,7 +4,6 @@ public class Stack {
     int size = 0;
     int stackArray[] = new int[4];
     int pushCount = 0, popCount = 0;
-
     public void push(int data) {
         stackArray[pushCount] = data;
         pushCount++;
