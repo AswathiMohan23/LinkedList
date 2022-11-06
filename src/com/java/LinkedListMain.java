@@ -107,7 +107,6 @@ public class LinkedListMain {
             if (key == element) {
                  result = i;
                 System.out.println("key 30 corresponds to node : "+result);
-
             }
         }
 
