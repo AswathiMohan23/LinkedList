@@ -15,7 +15,7 @@ public class LinkedListMain {
         pushData();
         popFirstData();
         popLastData();
-        searchNode();
+        searchNode(30);//element to be searched is 30 as per the question
         insertingAfterElement();
         deleteAndShowSize();
 
@@ -107,11 +107,11 @@ public class LinkedListMain {
         System.out.println("Pop value is : " + stack.popLastElement());
     }
 
-    public static void searchNode() {  //method to search a node with a particular key value
+    public static void searchNode(int element) {  //method to search a node with a particular key value
         int result = 0;
         System.out.println("\n===============================UC7==============================\n");
             //a linked list named simpleLinkedList has been already created for first uc for the method createSimpleLinkedList
-            int element = 30;
+            element = 30;
             System.out.println("list is : +" + simpleLinkedList);
             System.out.println("key 0 is  : " + simpleLinkedList.get(0) + "\nkey 1 is : " + simpleLinkedList.get(1) + "\nkey 2 is : " + simpleLinkedList.get(2));
             for (int i = 0; i < simpleLinkedList.size(); i++) {
@@ -131,13 +131,16 @@ public class LinkedListMain {
        System.out.println("\nRequired output is : 56->30->40->70 \nthe index of value 30 is 1...so after inserting 40 at index 2 we get the list as :  ");
        linkedListMethodsAppend.display();
    }
-   public static void deleteAndShowSize(){
-       LinkedListMethods linkedListMethods=new LinkedListMethods();
+   public static void deleteAndShowSize() {
+       LinkedListMethods linkedListMethods = new LinkedListMethods();
        System.out.println("=====================================UC9==========================");
        linkedListMethodsAppend.display();//taking the output of appendingTheElements method
        System.out.println("the size of data is : ");
-       int size =linkedListMethods.showSize();
-       System.out.println("size : "+size);
-   }
+       int size = linkedListMethods.showSize();
+       System.out.println("size : " + size);
+       System.out.println("data and size after deleting element 40 \n data is : ");
+       searchNode(40);
+
+
 
 }
