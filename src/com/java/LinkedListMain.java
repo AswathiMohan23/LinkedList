@@ -4,6 +4,7 @@ import java.io.FilterOutputStream;
 import java.util.LinkedList;
 
 public class LinkedListMain {
+    static LinkedList<Integer> simpleLinkedList=new LinkedList<>();
 
     public static void main(String[] args){
         createSimpleLinkedList();
@@ -19,12 +20,11 @@ public class LinkedListMain {
 
 
     public static void createSimpleLinkedList() {
-        LinkedList<Integer> list = new LinkedList<>();
-        list.add(56);
-        list.add(30);
-        list.add(70);
+        simpleLinkedList.add(56);
+        simpleLinkedList.add(30);
+        simpleLinkedList.add(70);
         System.out.println("\n\n===================UC1=====================\n");
-        System.out.println("the simple linkedList created = " + list);
+        System.out.println("the simple linkedList created = " + simpleLinkedList);
     }
     public static void addingElements() {
         System.out.println("\n==============================UC2============================");
@@ -95,15 +95,12 @@ public class LinkedListMain {
     public static void searchNode(){ //method to search a node with a particular key value
         int result = 0;
         System.out.println("===============================UC7==============================\n");
-        LinkedList<Integer> list = new LinkedList<>();
-        list.add(56);
-        list.add(30);
-        list.add(70);
+        //a linked list named simpleLinkedList has been already created for first uc for the method createSimpleLinkedList
         int element=30;
-        System.out.println("list is : +"+list);
-        System.out.println("key 0 is  : "+list.get(0)+"\nkey 1 is : "+list.get(1)+"\nkey 2 is : "+list.get(2));
-        for(int i=0;i<list.size();i++) {
-            int key =list.get(i);
+        System.out.println("list is : +"+simpleLinkedList);
+        System.out.println("key 0 is  : "+simpleLinkedList.get(0)+"\nkey 1 is : "+simpleLinkedList.get(1)+"\nkey 2 is : "+simpleLinkedList.get(2));
+        for(int i=0;i<simpleLinkedList.size();i++) {
+            int key =simpleLinkedList.get(i);
             if (key == element) {
                  result = i;
                 System.out.println("key 30 corresponds to node : "+result);
