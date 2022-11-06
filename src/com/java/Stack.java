@@ -1,7 +1,5 @@
 package com.java;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class Stack {
     int stackArray[]=new int[3];
     int pushCount=0,popCount=0;
@@ -30,6 +28,5 @@ public class Stack {
         DisplayStack();
         return data;
     }
-
 
 }

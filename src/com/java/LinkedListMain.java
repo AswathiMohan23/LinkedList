@@ -17,6 +17,7 @@ public class LinkedListMain {
         popLastData();
         searchNode();
         insertingAfterElement();
+        deleteAndShowSize();
 
 
     }
@@ -122,16 +123,21 @@ public class LinkedListMain {
                 }
             }
         }
-
-        public static void insertingAfterElement () {
-            System.out.println("\n==========================================UC8===================================\n");
-            System.out.println("the data is : ");
-            linkedListMethodsAppend.display();// using the output of appendingTheElements method
-            linkedListMethodsAppend.insert(2, 40);
-            System.out.println("\nRequired output is : 56->30->40->70 \nthe index of value 30 is 1...so after inserting 40 at index 2 we get the list as :  ");
-            linkedListMethodsAppend.display();
-
-
-        }
+   public static void insertingAfterElement () {
+       System.out.println("\n==========================================UC8===================================\n");
+       System.out.println("the data is : ");
+       linkedListMethodsAppend.display();// using the output of appendingTheElements method
+       linkedListMethodsAppend.insert(2, 40);
+       System.out.println("\nRequired output is : 56->30->40->70 \nthe index of value 30 is 1...so after inserting 40 at index 2 we get the list as :  ");
+       linkedListMethodsAppend.display();
+   }
+   public static void deleteAndShowSize(){
+       LinkedListMethods linkedListMethods=new LinkedListMethods();
+       System.out.println("=====================================UC9==========================");
+       linkedListMethodsAppend.display();//taking the output of appendingTheElements method
+       System.out.println("the size of data is : ");
+       int size =linkedListMethods.showSize();
+       System.out.println("size : "+size);
+   }
 
 }
