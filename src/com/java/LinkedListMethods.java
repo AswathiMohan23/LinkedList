@@ -48,8 +48,5 @@ public class LinkedListMethods {
         }
         System.out.println(node.data);// the while loop will check till next!=null, when next gets equal to null it exits without printing the data but i need that data so i am printing that data outside the loop
     }
-    public static int showSize(){
-        return size; // here in uc9, i'm using append method to add values so i have incremented
-        //size variable
-    }
+
 }

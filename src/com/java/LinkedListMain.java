@@ -3,9 +3,9 @@ package com.java;
 import java.util.LinkedList;
 
 public class LinkedListMain {
-    static LinkedList<Integer> SimpleList = new LinkedList<>();
+    int flag=0;
+    static LinkedList<Integer> simpleList = new LinkedList<>();
     static LinkedListMethods linkedListMethodsAppend = new LinkedListMethods();
-    static LinkedList<Integer> simpleLinkedList = new LinkedList<>();
 
     public static void main(String[] args) {
         createSimpleLinkedList();
@@ -15,24 +15,19 @@ public class LinkedListMain {
         pushData();
         popFirstData();
         popLastData();
-        searchNode(30);//element to be searched is 30 as per the question
+        searchNode();
         insertingAfterElement();
-        deleteAndShowSize();
+        deleteAndShowSize();//pop
 
 
     }
 
     public static void createSimpleLinkedList() {
-        SimpleList.add(56);
-        SimpleList.add(30);
-        SimpleList.add(70);
+        simpleList.add(56);
+        simpleList.add(30);
+        simpleList.add(70);
         System.out.println("\n\n===================UC1=====================\n");
-        System.out.println("the simple linkedList created = " + SimpleList);
-        simpleLinkedList.add(56);
-        simpleLinkedList.add(30);
-        simpleLinkedList.add(70);
-        System.out.println("\n\n===================UC1=====================\n");
-        System.out.println("the simple linkedList created = " + simpleLinkedList);
+        System.out.println("the simple linkedList created = " + simpleList);
     }
 
     public static void addingElements() {
@@ -52,9 +47,6 @@ public class LinkedListMain {
         LinkedListMethods linkedListMethods = new LinkedListMethods();
         System.out.println("while appending, the new elements will get added to the end position" +
                 "\nso required output is ====> 56,30,70");
-        // linkedListMethodAppend is declared as static at the top as ===> static LinkedListMethods linkedListMethodsAppend =new LinkedListMethods();
-        //it has been declared like this so that i can use the output of appendingTheElements method for UC8 inside insertingAfterElement method
-
         linkedListMethodsAppend.append(56);
         linkedListMethodsAppend.append(30);
         linkedListMethodsAppend.append(70);
@@ -79,7 +71,7 @@ public class LinkedListMain {
         stack.push(56);
         stack.push(30);
         stack.push(70);
-        stack.DisplayStack();
+        stack.displayStack();
     }
 
     public static void popFirstData() {//input 56,30,70
@@ -88,7 +80,7 @@ public class LinkedListMain {
         stack.push(30);
         stack.push(70);
         System.out.println("data is : ");
-        stack.DisplayStack();
+        stack.displayStack();
         System.out.println("================== UC5 ==================");
         System.out.println("required output sequence (after deleting first element ) ==> 30,70");
         System.out.println("Pop value is : " + stack.popFirstElement());
@@ -100,29 +92,28 @@ public class LinkedListMain {
         stack.push(56);
         stack.push(30);
         stack.push(70);
-        System.out.println("================== UC5 ==================");
+        System.out.println("================== UC6 ==================");
         System.out.println("data is : ");
-        stack.DisplayStack();
+        stack.displayStack();
         System.out.println("required output sequence (after deleting first element ) ==> 30,70");
         System.out.println("Pop value is : " + stack.popLastElement());
     }
 
-    public static void searchNode(int element) {  //method to search a node with a particular key value
+    public static void searchNode() {  //method to search a node with a particular key value
         int result = 0;
         System.out.println("\n===============================UC7==============================\n");
-            //a linked list named simpleLinkedList has been already created for first uc for the method createSimpleLinkedList
-            element = 30;
-            System.out.println("list is : +" + simpleLinkedList);
-            System.out.println("key 0 is  : " + simpleLinkedList.get(0) + "\nkey 1 is : " + simpleLinkedList.get(1) + "\nkey 2 is : " + simpleLinkedList.get(2));
-            for (int i = 0; i < simpleLinkedList.size(); i++) {
-                int key = simpleLinkedList.get(i);
-                if (key == element) {
-                    result = i;
-                    System.out.println("key 30 corresponds to node : " + result);
-
-                }
+        //a linked list named simpleLinkedList has been already created for first uc for the method createSimpleLinkedList
+        int element=30;
+        System.out.println("list is : +" + simpleList);
+        System.out.println("key 0 is  : " + simpleList.get(0) + "\nkey 1 is : " + simpleList.get(1) + "\nkey 2 is : " + simpleList.get(2));
+        for (int i = 0; i < simpleList.size(); i++) {
+            int key = simpleList.get(i);
+            if (key == element) {
+                result = i;
+                System.out.println("key " + element + " corresponds to node : " + result);
             }
         }
+    }
    public static void insertingAfterElement () {
        System.out.println("\n==========================================UC8===================================\n");
        System.out.println("the data is : ");
@@ -132,15 +123,18 @@ public class LinkedListMain {
        linkedListMethodsAppend.display();
    }
    public static void deleteAndShowSize() {
-       LinkedListMethods linkedListMethods = new LinkedListMethods();
-       System.out.println("=====================================UC9==========================");
-       linkedListMethodsAppend.display();//taking the output of appendingTheElements method
-       System.out.println("the size of data is : ");
-       int size = linkedListMethods.showSize();
-       System.out.println("size : " + size);
-       System.out.println("data and size after deleting element 40 \n data is : ");
-       searchNode(40);
+        System.out.println("=====================================UC9==========================");
+       Stack stack = new Stack();
+       stack.push(56);
+       stack.push(30);
+       stack.push(40);
+       stack.push(70);
+       stack.displayStack();
+       int size= stack.size();
+       System.out.println("size : "+size);
+       System.out.println("data and size after deleting element 40 \n ");
+       stack.popTheElement();
+       System.out.println("size : "+stack.size());
 
-
-
+   }
 }
