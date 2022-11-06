@@ -92,7 +92,7 @@ public class LinkedListMain {
         System.out.println("required output sequence (after deleting first element ) ==> 30,70");
         System.out.println("Pop value is : "+stack.popLastElement());
     }
-    public static void searchNode(){
+    public static void searchNode(){ //method to search a node with a particular key value
         int result = 0;
         System.out.println("===============================UC7==============================\n");
         LinkedList<Integer> list = new LinkedList<>();
@@ -109,6 +109,5 @@ public class LinkedListMain {
                 System.out.println("key 30 corresponds to node : "+result);
             }
         }
-
         }
 }
