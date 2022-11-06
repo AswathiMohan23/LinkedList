@@ -4,21 +4,21 @@ import java.io.FilterOutputStream;
 import java.util.LinkedList;
 
 public class LinkedListMain {
+    static LinkedListMethods linkedListMethodsAppend =new LinkedListMethods();
     static LinkedList<Integer> simpleLinkedList=new LinkedList<>();
 
     public static void main(String[] args){
         createSimpleLinkedList();
-        appendingTheElements();
+        appendingTheElements(); // using flag here to use the same method for uC8
         addingElements();
         insertingData();
         pushData();
         popFirstData();
         popLastData();
         searchNode();
+        insertingAfterElement();
 
     }
-
-
     public static void createSimpleLinkedList() {
         simpleLinkedList.add(56);
         simpleLinkedList.add(30);
@@ -27,6 +27,7 @@ public class LinkedListMain {
         System.out.println("the simple linkedList created = " + simpleLinkedList);
     }
     public static void addingElements() {
+
         System.out.println("\n==============================UC2============================");
         System.out.println("\nwhile adding, the new elements will get added in front " +
                 "\nso required output ===> 56,30,70");
@@ -39,15 +40,16 @@ public class LinkedListMain {
 
     public static void appendingTheElements() { // new element gets added at the end
         System.out.println("\n==============================UC3============================");
-        LinkedListMethods linkedListMethods=new LinkedListMethods();
         System.out.println("while appending, the new elements will get added to the end position" +
-                "\nso required output is ====> 56,30,70");
-        linkedListMethods.append(56);
-        linkedListMethods.append(30);
-        linkedListMethods.append(70);
-        linkedListMethods.display();
+                    "\nso required output is ====> 56,30,70");
+        // linkedListMethodAppend is declared as static at the top as ===> static LinkedListMethods linkedListMethodsAppend =new LinkedListMethods();
+        //it has been declared like this so that i can use the output of appendingTheElements method for UC8 inside insertingAfterElement method
 
-    }
+        linkedListMethodsAppend.append(56);
+        linkedListMethodsAppend.append(30);
+        linkedListMethodsAppend.append(70);
+        linkedListMethodsAppend.display();
+        }
 
     public static void insertingData() {
         LinkedListMethods linkedListMethods=new LinkedListMethods();
@@ -94,7 +96,7 @@ public class LinkedListMain {
     }
     public static void searchNode(){ //method to search a node with a particular key value
         int result = 0;
-        System.out.println("===============================UC7==============================\n");
+        System.out.println("\n===============================UC7==============================\n");
         //a linked list named simpleLinkedList has been already created for first uc for the method createSimpleLinkedList
         int element=30;
         System.out.println("list is : +"+simpleLinkedList);
@@ -106,5 +108,15 @@ public class LinkedListMain {
                 System.out.println("key 30 corresponds to node : "+result);
             }
         }
-        }
+    }
+    public static void insertingAfterElement(){
+        System.out.println("\n==========================================UC8===================================\n");
+        System.out.println("the data is : ");
+        linkedListMethodsAppend.display();// using the output of appendingTheElements method
+        linkedListMethodsAppend.insert(2,40);
+        System.out.println("\nRequired output is : 56->30->40->70 \nthe index of value 30 is 1...so after inserting 40 at index 2 we get the list as :  ");
+        linkedListMethodsAppend.display();
+
+
+    }
 }
