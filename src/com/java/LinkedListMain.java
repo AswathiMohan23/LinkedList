@@ -3,7 +3,6 @@ package com.java;
 import java.util.LinkedList;
 
 public class LinkedListMain {
-    int flag=0;
     static LinkedList<Integer> simpleList = new LinkedList<>();
     static LinkedListMethods linkedListMethodsAppend = new LinkedListMethods();
 
@@ -18,8 +17,14 @@ public class LinkedListMain {
         searchNode();
         insertingAfterElement();
         deleteAndShowSize();//pop
+        sortInAscendingOrder();
 
 
+    }
+
+    public static void sortInAscendingOrder() {
+        SortedLinkedList sortedLinkedList=new SortedLinkedList();
+        sortedLinkedList.sort();
     }
 
     public static void createSimpleLinkedList() {
