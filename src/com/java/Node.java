@@ -3,18 +3,21 @@ package com.java;
 public class Node {
     int data;
     Node next;
-    private int value;
+    private int key;
     private int nodeValue;
     public Node() {}
 
-
-    public int getValue() {
-        return value;
+    public Node(int key, int nodeValue) {
+        this.key = key;
+        this.nodeValue = nodeValue;
     }
 
-    public Node(int nodeValue, int value) {
-        this.nodeValue = nodeValue;
-        this.value = value;
+    public int getKey() {
+        return key;
+    }
+
+    public void setKey(int key) {
+        this.key = key;
     }
 
     public int getData() {
@@ -31,10 +34,6 @@ public class Node {
 
     public void setNext(Node next) {
         this.next = next;
-    }
-
-    public void setValue(int value) {
-        this.value = value;
     }
 
     public int getNodeValue() {

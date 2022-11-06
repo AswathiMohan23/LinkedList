@@ -101,12 +101,12 @@ public class LinkedListMain {
         list.add(70);
         int element=30;
         System.out.println("list is : +"+list);
-        System.out.println("index 0 is  : "+list.get(0)+"\nindex 1 is : "+list.get(1)+"\nindex 2 is : "+list.get(2));
+        System.out.println("key 0 is  : "+list.get(0)+"\nkey 1 is : "+list.get(1)+"\nkey 2 is : "+list.get(2));
         for(int i=0;i<list.size();i++) {
-            int value =list.get(i);
-            if (value == element) {
+            int key =list.get(i);
+            if (key == element) {
                  result = i;
-                System.out.println("value 30 corresponds to node : "+result);
+                System.out.println("key 30 corresponds to node : "+result);
 
             }
         }
